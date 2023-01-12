@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-screen {
+  max-width: 575px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("../imgs/golden-friday.jpg");
+  background-size: cover;
+  background-position: 45% 50%;
+  background-repeat: no-repeat;
+  -webkit-animation: bg 8s linear infinite alternate;
+          animation: bg 8s linear infinite alternate;
+  overflow: hidden;
+}
+.main-screen .img-asset {
+  position: absolute;
+}
+.main-screen .img-asset.bg {
+  bottom: 0;
+  left: -10%;
+  width: 170%;
+}
+.main-screen .img-asset.golden-friday {
+  width: 200%;
+  left: -40%;
+  bottom: 20%;
+  -webkit-animation: bg 10s linear infinite alternate;
+          animation: bg 10s linear infinite alternate;
+}
+.main-screen .img-asset.text {
+  width: 30%;
+  right: 10%;
+  bottom: 2%;
+}
+.main-screen .img-asset.text img {
+  width: 100%;
+  opacity: 0;
+}
+.main-screen .img-asset.text img.text-1 {
+  -webkit-animation: txt 0.25s 1s forwards;
+          animation: txt 0.25s 1s forwards;
+}
+.main-screen .img-asset.text img.text-2 {
+  -webkit-animation: txt 0.25s 1.25s forwards;
+          animation: txt 0.25s 1.25s forwards;
+}
+.main-screen .img-asset.text img.text-3 {
+  -webkit-animation: txt 0.25s 1.5s forwards;
+          animation: txt 0.25s 1.5s forwards;
+}
+.main-screen .img-asset.text img.text-4 {
+  -webkit-animation: txt 0.25s 1.75s forwards;
+          animation: txt 0.25s 1.75s forwards;
+}
+.main-screen .img-asset.text img.text-5 {
+  -webkit-animation: txt 0.25s 2s forwards;
+          animation: txt 0.25s 2s forwards;
+}
+.main-screen .img-asset.text img.text-6 {
+  margin-top: 6px;
+  cursor: pointer;
+  -webkit-animation: btn 0.25s 2.65s forwards;
+          animation: btn 0.25s 2.65s forwards;
+}
+.main-screen .img-asset.cans {
+  width: 40%;
+  bottom: 10px;
+  left: 5%;
+  padding-top: 40%;
+}
+.main-screen .img-asset.cans img {
+  width: 49%;
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+.main-screen .img-asset.cans img.can-1 {
+  left: 50%;
+  width: 52%;
+  transform: translate(-50%, -6%);
+  z-index: 1;
+  -webkit-animation: can 0.5s forwards;
+          animation: can 0.5s forwards;
+}
+.main-screen .img-asset.cans img.can-2 {
+  transform: rotate(-10deg);
+  left: 0;
+  opacity: 0;
+  -webkit-animation: can 0.5s 0.2s forwards;
+          animation: can 0.5s 0.2s forwards;
+}
+.main-screen .img-asset.cans img.can-3 {
+  transform: rotate(10deg);
+  right: 0;
+  opacity: 0;
+  -webkit-animation: can 0.5s 0.4s forwards;
+          animation: can 0.5s 0.4s forwards;
+}
+
+@-webkit-keyframes can {
+  0% {
+    bottom: -100%;
+    opacity: 1;
+  }
+  65% {
+    bottom: 10%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes can {
+  0% {
+    bottom: -100%;
+    opacity: 1;
+  }
+  65% {
+    bottom: 10%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes txt {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txt {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bg {
+  0% {
+    background-position: 45% 50%;
+  }
+  100% {
+    background-position: 55% 50%;
+  }
+}
+@keyframes bg {
+  0% {
+    background-position: 45% 50%;
+  }
+  100% {
+    background-position: 55% 50%;
+  }
+}/*# sourceMappingURL=styles.css.map */

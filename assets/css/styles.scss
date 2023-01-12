@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-screen {
+  max-width: 575px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("../imgs/golden-friday.jpg");
+  background-size: cover;
+  background-position: 45% 50%;
+  background-repeat: no-repeat;
+  animation: bg 8s linear infinite alternate;
+  overflow: hidden;
+
+  .img-asset {
+    position: absolute;
+
+    &.bg {
+      bottom: 0;
+      left: -10%;
+      width: 170%;
+    }
+
+    &.golden-friday {
+      width: 200%;
+      left: -40%;
+      bottom: 20%;
+      animation: bg 10s linear infinite alternate;
+    }
+
+    &.text {
+      width: 30%;
+      right: 10%;
+      bottom: 2%;
+
+      img {
+        width: 100%;
+        opacity: 0;
+
+        &.text-1 {
+          animation: txt 0.25s 1s forwards;
+        }
+
+        &.text-2 {
+          animation: txt 0.25s 1.25s forwards;
+        }
+
+        &.text-3 {
+          animation: txt 0.25s 1.5s forwards;
+        }
+
+        &.text-4 {
+          animation: txt 0.25s 1.75s forwards;
+        }
+
+        &.text-5 {
+          animation: txt 0.25s 2s forwards;
+        }
+
+        &.text-6 {
+          margin-top: 6px;
+          cursor: pointer;
+          animation: btn 0.25s 2.65s forwards;
+        }
+      }
+    }
+
+    &.cans {
+      width: 40%;
+      bottom: 10px;
+      left: 5%;
+      padding-top: 40%;
+
+      img {
+        width: 49%;
+        display: block;
+        bottom: 0;
+        position: absolute;
+
+        &.can-1 {
+          left: 50%;
+          width: 52%;
+          transform: translate(-50%, -6%);
+          z-index: 1;
+          animation: can 0.5s forwards;
+        }
+
+        &.can-2 {
+          transform: rotate(-10deg);
+          left: 0;
+          opacity: 0;
+          animation: can 0.5s 0.2s forwards;
+        }
+
+        &.can-3 {
+          transform: rotate(10deg);
+          right: 0;
+          opacity: 0;
+          animation: can 0.5s 0.4s forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes can {
+  0% {
+    bottom: -100%;
+    opacity: 1;
+  }
+
+  65% {
+    bottom: 10%;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes txt {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bg {
+  0% {
+    background-position: 45% 50%;
+  }
+
+  100% {
+    background-position: 55% 50%;
+  }
+}
